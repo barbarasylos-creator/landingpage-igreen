@@ -1,0 +1,690 @@
+/* ===========================
+   IGreen Energy Rio Pardo
+   Folha de estilos principal
+   =========================== */
+
+:root {
+  --cor-primaria: #00b32a;
+  --cor-primaria-escura: #0b7a24;
+  --cor-primaria-mais-escura: #075c1a;
+  --cor-texto: #1a1a1a;
+  --cor-texto-suave: #45514a;
+  --cor-fundo: #ffffff;
+  --cor-fundo-alt: #f3faf4;
+  --cor-borda: #dfe8e1;
+  --cor-branco: #ffffff;
+  --sombra-card: 0 4px 16px rgba(10, 40, 20, 0.08);
+  --raio: 14px;
+  --largura-maxima: 1160px;
+  --fonte: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  font-family: var(--fonte);
+  color: var(--cor-texto);
+  background: var(--cor-fundo);
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+a {
+  color: var(--cor-primaria-escura);
+}
+
+.container {
+  width: 100%;
+  max-width: var(--largura-maxima);
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+section {
+  padding: 72px 0;
+}
+
+.secao-alt {
+  background: var(--cor-fundo-alt);
+}
+
+h1, h2, h3 {
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+h2 {
+  font-size: clamp(1.7rem, 2.5vw, 2.3rem);
+}
+
+.subtitulo-secao {
+  color: var(--cor-texto-suave);
+  max-width: 640px;
+  margin: 0 0 40px;
+  font-size: 1.05rem;
+}
+
+.rotulo-secao {
+  display: inline-block;
+  color: var(--cor-primaria-escura);
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  margin-bottom: 10px;
+}
+
+/* Botões */
+.botao {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 26px;
+  border-radius: 999px;
+  font-weight: 700;
+  text-decoration: none;
+  border: 2px solid transparent;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.botao:hover {
+  transform: translateY(-1px);
+}
+
+.botao-primario {
+  background: var(--cor-primaria-escura);
+  color: var(--cor-branco);
+}
+
+.botao-primario:hover {
+  background: var(--cor-primaria-mais-escura);
+  box-shadow: var(--sombra-card);
+}
+
+.botao-secundario {
+  background: transparent;
+  border-color: var(--cor-branco);
+  color: var(--cor-branco);
+}
+
+.botao-secundario:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.botao-outline {
+  background: transparent;
+  border-color: var(--cor-primaria-escura);
+  color: var(--cor-primaria-escura);
+}
+
+.botao-outline:hover {
+  background: var(--cor-fundo-alt);
+}
+
+.botao-bloco {
+  width: 100%;
+  justify-content: center;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: var(--cor-branco);
+  border-bottom: 1px solid var(--cor-borda);
+}
+
+.cabecalho .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  gap: 16px;
+}
+
+.marca {
+  display: flex;
+  align-items: center;
+}
+
+.marca img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-principal {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+}
+
+.nav-principal a {
+  color: var(--cor-texto);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.nav-principal a:hover {
+  color: var(--cor-primaria-escura);
+}
+
+.cabecalho .botao {
+  padding: 10px 20px;
+  font-size: 0.9rem;
+}
+
+.botao-menu {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 8px;
+}
+
+.botao-menu span {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--cor-texto);
+  margin: 5px 0;
+}
+
+/* Início / Hero */
+.hero {
+  position: relative;
+  color: var(--cor-branco);
+  background: linear-gradient(135deg, rgba(7, 92, 26, 0.92), rgba(0, 179, 42, 0.85)), url("../img/usina-solar-banner.webp") center/cover no-repeat;
+  padding: 100px 0;
+}
+
+.hero-conteudo {
+  max-width: 680px;
+}
+
+.hero h1 {
+  font-size: clamp(2.1rem, 4vw, 3.1rem);
+}
+
+.hero .slogan {
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 18px;
+}
+
+.hero p {
+  font-size: 1.05rem;
+  margin-bottom: 30px;
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.hero-acoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 14px;
+}
+
+.hero-destaques {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  margin-top: 48px;
+  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.hero-destaque strong {
+  display: block;
+  font-size: 1.5rem;
+}
+
+.hero-destaque span {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Sobre */
+.sobre-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.sobre-imagem img {
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-card);
+}
+
+.sobre-lista {
+  list-style: none;
+  padding: 0;
+  margin: 24px 0 0;
+  display: grid;
+  gap: 14px;
+}
+
+.sobre-lista li {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  color: var(--cor-texto-suave);
+}
+
+.sobre-lista svg {
+  flex-shrink: 0;
+  color: var(--cor-primaria-escura);
+  margin-top: 3px;
+}
+
+/* Serviços */
+.grade-servicos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card-servico {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.icone-servico {
+  width: 52px;
+  height: 52px;
+  border-radius: 12px;
+  background: var(--cor-fundo-alt);
+  color: var(--cor-primaria-escura);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-servico h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0;
+}
+
+.card-servico p {
+  color: var(--cor-texto-suave);
+  margin: 0;
+  flex-grow: 1;
+}
+
+.card-servico a {
+  font-weight: 700;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 4px;
+}
+
+.banner-imagem {
+  margin: 40px 0 0;
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra-card);
+}
+
+.banner-imagem img {
+  width: 100%;
+  height: 320px;
+  object-fit: cover;
+}
+
+.banner-imagem figcaption {
+  padding: 14px 20px;
+  background: var(--cor-branco);
+  color: var(--cor-texto-suave);
+  font-size: 0.9rem;
+}
+
+/* Como funciona */
+.como-funciona-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
+}
+
+.passos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  counter-reset: passo;
+  display: grid;
+  gap: 22px;
+}
+
+.passos li {
+  display: flex;
+  gap: 16px;
+  counter-increment: passo;
+}
+
+.passos li::before {
+  content: counter(passo);
+  flex-shrink: 0;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--cor-primaria-escura);
+  color: var(--cor-branco);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+}
+
+.passos h3 {
+  font-size: 1.05rem;
+  margin-bottom: 4px;
+}
+
+.passos p {
+  margin: 0;
+  color: var(--cor-texto-suave);
+}
+
+.como-funciona-imagem img {
+  border-radius: var(--raio);
+  box-shadow: var(--sombra-card);
+}
+
+/* Depoimentos */
+.grade-depoimentos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
+}
+
+.card-depoimento {
+  background: var(--cor-branco);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 26px;
+}
+
+.card-depoimento p {
+  color: var(--cor-texto-suave);
+  font-style: italic;
+}
+
+.autor-depoimento {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 16px;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.autor-depoimento span {
+  display: block;
+  font-weight: 400;
+  color: var(--cor-texto-suave);
+  font-size: 0.85rem;
+}
+
+/* FAQ */
+.lista-faq {
+  max-width: 760px;
+  display: grid;
+  gap: 12px;
+}
+
+.item-faq {
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+  padding: 4px 20px;
+  background: var(--cor-branco);
+}
+
+.item-faq summary {
+  cursor: pointer;
+  font-weight: 700;
+  padding: 16px 0;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.item-faq summary::-webkit-details-marker {
+  display: none;
+}
+
+.item-faq summary::after {
+  content: "+";
+  font-size: 1.4rem;
+  color: var(--cor-primaria-escura);
+  flex-shrink: 0;
+}
+
+.item-faq[open] summary::after {
+  content: "\2212";
+}
+
+.item-faq p {
+  margin: 0 0 16px;
+  color: var(--cor-texto-suave);
+}
+
+/* Programa de indicação */
+.indicacao {
+  background: linear-gradient(135deg, var(--cor-primaria-mais-escura), var(--cor-primaria));
+  color: var(--cor-branco);
+  border-radius: var(--raio);
+  padding: 48px;
+  display: grid;
+  grid-template-columns: 1.3fr 1fr;
+  gap: 32px;
+  align-items: center;
+}
+
+.indicacao h2 {
+  color: var(--cor-branco);
+}
+
+.indicacao p {
+  color: rgba(255, 255, 255, 0.92);
+}
+
+.indicacao-valor {
+  background: rgba(255, 255, 255, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.35);
+  border-radius: var(--raio);
+  padding: 28px;
+  text-align: center;
+}
+
+.indicacao-valor strong {
+  display: block;
+  font-size: 2.2rem;
+}
+
+.indicacao-valor span {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+/* Contato / Rodapé */
+.rodape {
+  background: #0d1f12;
+  color: rgba(255, 255, 255, 0.88);
+  padding-top: 64px;
+}
+
+.rodape h2 {
+  color: var(--cor-branco);
+}
+
+.rodape .subtitulo-secao {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.contato-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 40px;
+}
+
+.lista-contato {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 16px;
+}
+
+.lista-contato li {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+.lista-contato svg {
+  flex-shrink: 0;
+  color: var(--cor-primaria);
+  margin-top: 3px;
+}
+
+.lista-contato a {
+  color: var(--cor-branco);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.lista-contato span.rotulo {
+  display: block;
+  font-size: 0.8rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.rodape-base {
+  margin-top: 56px;
+  padding: 22px 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  text-align: center;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Botão flutuante do WhatsApp */
+.whatsapp-flutuante {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  background: var(--cor-primaria-escura);
+  color: var(--cor-branco);
+  width: 58px;
+  height: 58px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+}
+
+.whatsapp-flutuante:hover {
+  background: var(--cor-primaria-mais-escura);
+}
+
+/* Utilidades */
+.somente-leitor-tela {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+/* Responsivo */
+@media (max-width: 880px) {
+  .sobre-grid,
+  .como-funciona-grid,
+  .contato-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sobre-imagem {
+    order: -1;
+  }
+
+  .indicacao {
+    grid-template-columns: 1fr;
+    padding: 32px 24px;
+  }
+}
+
+@media (max-width: 720px) {
+  .nav-principal {
+    position: fixed;
+    top: 65px;
+    left: 0;
+    right: 0;
+    background: var(--cor-branco);
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    padding: 12px 20px 20px;
+    border-bottom: 1px solid var(--cor-borda);
+    transform: translateY(-130%);
+    transition: transform 0.2s ease;
+  }
+
+  .nav-principal.aberto {
+    transform: translateY(0);
+  }
+
+  .nav-principal a {
+    padding: 12px 0;
+    width: 100%;
+    border-bottom: 1px solid var(--cor-borda);
+  }
+
+  .botao-menu {
+    display: block;
+  }
+
+  .cabecalho .botao-primario.somente-desktop {
+    display: none;
+  }
+
+  section {
+    padding: 56px 0;
+  }
+
+  .hero {
+    padding: 64px 0;
+  }
+
+  .hero-destaques {
+    gap: 20px;
+  }
+}
