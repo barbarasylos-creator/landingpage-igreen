@@ -1,5 +1,5 @@
-  // ============ PARTE PARA EDITAR ============
-  const API = " https://landingpage-igreen.barbara-sylos.workers.dev/";
+(() => {  // ============ PARTE PARA EDITAR ============
+  const API = "https://landingpage-igreen.barbara-sylos.workers.dev/";
   const TITULO = "Tire suas dúvidas";
   const SAUDACAO = "Olá! Como posso te ajudar com nossos serviços?";
 
